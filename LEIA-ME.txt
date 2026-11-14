@@ -1,0 +1,27 @@
+UP FIT ACADEMIA — SITE COMPLETO PARA VERCEL
+Versão interativa: vídeos na página, Google Maps, galeria, abas e cabeçalho fixo.
+
+PUBLICAÇÃO
+Extraia este ZIP. O index.html e o vercel.json ficam na raiz.
+Opção CLI: dentro da pasta extraída, execute npx vercel --prod e siga o login/configuração.
+Opção Git: envie os arquivos a um repositório e importe na Vercel.
+Framework: Other. Sem comando de build. Output Directory: .
+A configuração está incluída em vercel.json.
+
+Não é necessário instalar dependências para o site funcionar.
+A Vercel deve receber os arquivos do site, não apenas um ZIP dentro de um repositório.
+
+ARQUIVOS
+index.html: conteúdo
+style.css: layout e animações
+app.js: interações
+assets/: fotos, fonte, ícone e vídeos locais
+
+OBSERVAÇÕES
+O mapa e os links de WhatsApp/Instagram precisam de internet.
+O endereço de imagem de compartilhamento está relativo à raiz; após definir o domínio final, substitua /assets/gym-1.jpg nas metatags por sua URL completa.
+Confirme horários, modalidades e condições da aula experimental com a academia.
+Não há senha nem dependência de login do ChatGPT neste pacote.
+
+Documentação: https://vercel.com/docs/builds/configure-a-build
+CLI: https://vercel.com/docs/cli/deploy
