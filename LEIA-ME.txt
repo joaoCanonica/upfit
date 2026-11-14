@@ -1,27 +1,32 @@
-UP FIT ACADEMIA — SITE COMPLETO PARA VERCEL
-Versão interativa: vídeos na página, Google Maps, galeria, abas e cabeçalho fixo.
+UP FIT ACADEMIA — SITE
 
-PUBLICAÇÃO
-Extraia este ZIP. O index.html e o vercel.json ficam na raiz.
-Opção CLI: dentro da pasta extraída, execute npx vercel --prod e siga o login/configuração.
-Opção Git: envie os arquivos a um repositório e importe na Vercel.
+PUBLICAÇÃO (Vercel)
 Framework: Other. Sem comando de build. Output Directory: .
-A configuração está incluída em vercel.json.
-
-Não é necessário instalar dependências para o site funcionar.
-A Vercel deve receber os arquivos do site, não apenas um ZIP dentro de um repositório.
+A configuração já está em vercel.json. Não há dependências para instalar.
 
 ARQUIVOS
-index.html: conteúdo
-style.css: layout e animações
-app.js: interações
-assets/: fotos, fonte, ícone e vídeos locais
+index.html   conteúdo
+style.css    visual e layout
+app.js       interações (WhatsApp, horário "aberto agora", vídeos, avaliações)
+reviews.js   AVALIAÇÕES DO GOOGLE — edite aqui
+assets/      fotos, fonte, ícone e vídeos
+
+AVALIAÇÕES DO GOOGLE
+Abra reviews.js e preencha com os dados reais do perfil no Google Maps
+(https://www.google.com/maps?cid=4897489707821078433):
+  rating: nota (ex.: 4.8)
+  total:  número de avaliações (ex.: 120)
+  reviews: copie as avaliações que quiser destacar, com nome, estrelas e texto.
+Enquanto estiver vazio, a seção mostra o perfil do Google com os botões
+"Ler avaliações no Google" e "Deixar minha avaliação".
+
+HORÁRIOS
+Os horários aparecem em index.html (lista) e em app.js (variável schedule,
+em minutos desde 0h), que calcula o selo "Aberto agora / Fechado".
+Se mudar um, mude o outro.
 
 OBSERVAÇÕES
-O mapa e os links de WhatsApp/Instagram precisam de internet.
-O endereço de imagem de compartilhamento está relativo à raiz; após definir o domínio final, substitua /assets/gym-1.jpg nas metatags por sua URL completa.
-Confirme horários, modalidades e condições da aula experimental com a academia.
-Não há senha nem dependência de login do ChatGPT neste pacote.
-
-Documentação: https://vercel.com/docs/builds/configure-a-build
-CLI: https://vercel.com/docs/cli/deploy
+Depois de definir o domínio final, troque /assets/gym-1.jpg nas metatags
+og:image por uma URL completa (ex.: https://seudominio.com.br/assets/gym-1.jpg).
+Fotos em resolução maior deixam o site ainda mais bonito: basta substituir
+assets/gym-1.jpg e assets/gym-2.jpg mantendo os nomes.
